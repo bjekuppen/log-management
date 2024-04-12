@@ -1,0 +1,19 @@
+formatters:
+  simple:
+    format: "[{relativeCreated:8.0f} ms][{threadName:>12}:{thread:<6}][{name:>40}:{lineno:<4}] - {levelname:>6} - {message}"
+    style: "{"
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: simple
+    stream: ext://sys.stdout
+  file_handler:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: simple
+    filename: your_log_file.log
+    mode: a
+root:
+  level: DEBUG
+  handlers: [console, file_handler]
