@@ -16,5 +16,5 @@ def timestamp_placeholder(handler_config):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     handler_config["filename"] = os.path.join(
-        dir_path, handler_config["filename"] % {"timestamp": timestamp}
+        handler_config["filename"] % {"timestamp": timestamp}
     )
